@@ -13,3 +13,5 @@ Nowadays, C++ is used commonly for browsers and operating systems, although it a
 I wanted to use VSCode for my programming, as it's what I use for other languages. This, however, turned out to be a challenge to figure out.
 Basically, while there are extensions for VSCode that will work with C++, to get the compiler to work, you need to download the compiler, then open your VSCode project via a command prompt window. I especially struggled when the VSCode website just told me to "change directory as needed" without telling me how, as if everyone has command prompt commands memorized.
 After all that effort though, I got it to work!
+
+Comments in C++ are done using "//" at the start of a comment. Files that are run start running at the main function.

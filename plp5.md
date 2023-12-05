@@ -11,18 +11,13 @@ public:
     Counter(){
         value = 0;
     }
-
     Counter(int start){
         value = start;
     }
 
-    void inc(){
-        value ++;
-    }
+    void inc(){value ++;}
 
-    int getValue(){
-        return value;
-    }
+    int getValue(){return value;}
 };
 ```
 ```
@@ -49,13 +44,8 @@ Constructor methods are optional in C++, using default values for attributes if 
 For instance, if I didn't define any contructors, `value` would just be 0.
 However, I did define two different constructors, for two input cases:
 ```
-Counter(){
-    value = 0;
-}
-
-Counter(int start){
-    value = start;
-}
+Counter(){value = 0;}
+Counter(int start){value = start;}
 ```
 These allow for different object declarations, done like so:
 ```
@@ -70,19 +60,11 @@ C++ supports inheritance, like:
 ```
 class ComplexCounter: public Counter{
 public:
+    ComplexCounter(){value = 0;}
 
-    ComplexCounter(){
-        value = 0;
-    }
+    ComplexCounter(int start){value = start;}
 
-    ComplexCounter(int start){
-        value = start;
-    }
-
-    void dec(){
-        value -= 1;
-    }
-
+    void dec(){value -= 1;}
 };
 ```
 ```

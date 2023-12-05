@@ -62,3 +62,40 @@ These allow for different object declarations, done like so:
 Counter ct1;
 Counter ct2(10);
 ```
+Constructor inputs are given in parantheses after the object name.
+
+Inheritance
+
+C++ supports inheritance, like:
+```
+class ComplexCounter: public Counter{
+public:
+
+    ComplexCounter(){
+        value = 0;
+    }
+
+    ComplexCounter(int start){
+        value = start;
+    }
+
+    void dec(){
+        value -= 1;
+    }
+
+};
+```
+```
+ComplexCounter cct(10);
+cout << cct.getValue() << "\n";
+cct.inc();
+cout << cct.getValue() << "\n";
+cct.dec();
+cout << cct.getValue() << "\n";
+```
+The use of `:public Counter` gives the complex counter all attributes and methods of counter, although since we use custom contructors, those need to be redefined.
+
+C++ also supports inheritance from multiple classes, like in this example from https://www.w3schools.com/cpp/cpp_inheritance_multiple.asp:
+```
+class MyChildClass: public MyClass, public MyOtherClass {};
+```

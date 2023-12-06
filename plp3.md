@@ -11,6 +11,7 @@ double mult(double a, double b) { //must be declared before function call
     return a*b;
 }
 ```
+Functions then get called using `fName(inputs)` as such:
 ```
 double num1 = mult(1,3);
 cout << num1 << "\n";

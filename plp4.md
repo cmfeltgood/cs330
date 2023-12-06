@@ -62,7 +62,6 @@ We want to figure out how many of these people are gay, and list them out in the
 
 While Loops:
 ```
-//while loop
 int ind = 0;
 int gayCount = 0;
 while (ind < sizeof(peopleIsGay)/sizeof(bool)){ //sizeof... gets number of items in list
@@ -85,16 +84,54 @@ Never forget to change `ind` within the while loop, to prevent it from going for
 
 Do... While Loops:
 ```
+ind = 0;
+gayCount = 0;
+do{
+    if (peopleIsGay[ind]){
+        gayCount ++;
+        cout << people[ind] << "\n";
+    }
+    ind ++;
+} while (ind < sizeof(peopleIsGay)/sizeof(bool));
+cout << gayCount << "\n\n";
 ```
-
+This acts as essentially a flipped while loop. 
+It functions the same as the loop above, however, the conditional goes after the action performed.
+This is much less commonly used compared to the while loop above, but some programmers like it.
 
 
 For Loops:
 ```
+gayCount = 0;
+for (int i = 0; i < sizeof(peopleIsGay)/sizeof(bool);i++){
+    if (peopleIsGay[i]){
+        cout << people[i] << "\n";
+        gayCount ++;
+    }
+}
+cout << gayCount << "\n\n"; //4
 ```
+In this case, this for loop does the same actions as the while loops above, but instead of defining our own index tracker, it gets built into the loop declaration.
 
+This for loop consists of 3 statements:
 
+1: `int i = 0` : Runs at the start of the loop, usually declaring a dummy variable to track
+
+2: `i < sizeof(peopleIsGay)/sizeof(bool)` : Functions as the conditional in the while loop, exiting the for loop when the condition is not met.
+
+3: `i++` : Action to perform at the end of each loop cycle. `i++` is very common when walking up some list or doing some fancy counting.
+
+This helps keep track of everything in one line instead of seperately.
 
 For Loops with Lists:
 ```
+gayCount = 0;
+for (bool statement : peopleIsGay){
+    if (statement){
+        gayCount ++;
+    }
+}
+cout << gayCount << "\n\n"; //4
 ```
+This for loop simply goes through each item in our `peopleIsGay` list.
+Since we're not keeping track of a dummy variable here, we can't compare to our other list to output names, but when only one list is walked through at a time, this is a good way to do that in a more condensed form, by directly working with each item in the list.

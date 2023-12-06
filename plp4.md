@@ -4,8 +4,8 @@ Conditionals
 
 These use the same exact format as Java, i.e.:
 ```
-int a = 5;
-int b = 7;
+double christineGay = 1.6;
+double stephanieGay = 1.2;
 if (b > a){ //same syntax as java
     cout << b << "\n";
 }
@@ -13,25 +13,25 @@ else if (a > b){cout << a << "\n";} //else if, not elif
 else {cout << "AAAAAAA" << "\n";}
 ```
 
-with the same operators as Java uses (<,>,==,!=,etc.,&&,||)
+with the same operators as most coding languages, and `&&` and `||` for and and or (<,>,==,!=,etc.,&&,||)
 
 Switch Statements
 
 Switch statements compare one value to find things it might possibly be equal to.
 This works similarly to an if-else chain, but more condensed in a way that makes more sense.
 ```
-int a = 4;
-switch(a) {
-    case 1:
-        cout << "this should not work";
+string gf = "Alex";
+switch(gf) {
+    case "Stephanie":
+        cout << "once again i am not dating steph";
         break;
-    case 2:
-        cout << "neither should this";
+    case "Kiersten":
+        cout << "not dating steph's partner, either";
         break;
-    case 4: //use of colon is odd
-        cout << "but this should come out"; //yes it does
+    case "Alex": //use of colon is odd
+        cout << "I am dating Alex!"; //yes it does
         break; //break to stop checking of other cases
-    case 5:
+    case "Myself":
         cout << "this code won't even be reached";
 }
 ```

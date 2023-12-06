@@ -60,3 +60,46 @@ Then, in the function, the `*` used before the pointer name signifies that we wa
 that is being pointed at: the string itself. 
 This then indirectly changes `a` and `b`.
 
+This method may seem clunky, but it's the most universal way to handle outputs of multiple variable types. The other options have their own issues.
+
+Option 2: std::array<>
+```
+std::array<string,2> exciteArray(string in){ //needs #include <array>
+    string light_excitement = in +"!";
+    string heavy_excitement = in + "!!!!!!!!!!!!!";
+    std::array<string,2> strArr;
+    strArr = {light_excitement,heavy_excitement};
+    return strArr;
+}
+```
+```
+std::array<string,2> arrOut = exciteArray(hello);
+cout << arrOut[0]<< " " << arrOut[1] << "\n\n";
+```
+(note that this requires `#include <array>` at the start of the file)
+
+This makes use of the C++ array object, where its start point and references must be used. 
+This is clunky, and requires the output to also be `std::array<string,2>` but it works when outputting the same variable type.
+
+Option 3: Build-a-class
+```
+class TwoStrings{
+public:
+    string str1;
+    string str2;
+};
+```
+```
+TwoStrings exciteClass(string in){
+    TwoStrings strs;
+    strs.str1 = in + "!";
+    strs.str2 = in + "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
+    return strs;
+}
+```
+```
+TwoStrings classOut = exciteClass(hello);
+cout << classOut.str1 << " " << classOut.str2;
+```
+While I haven't gone over classes and objects yet (in order of PLP), the gist is that you build your own class, with whatever attributes you want to return, put local variables into an object of that class, and return that.
+This method is extra writing, but if you don't want to deal with pointers, this can work in certain circumstances.

@@ -7,18 +7,19 @@ returnType functionName(inputType inputName, otherType otherName) {code;}
 ```
 Here's an example:
 ```
-double mult(double a, double b) { //must be declared before function call
-    return a*b;
+double modifyGay(double gayPc, double mult) { //must be declared before function call
+    return gayPc*mult;
 }
 ```
 Functions then get called using `fName(inputs)` as such:
 ```
-double num1 = mult(1,3);
+double christineGay = 0.5
+double christineGayWhenAlex = modifyGay(christineGay,10);
 cout << num1 << "\n";
 ```
 Recursion is also possible in C++, like in this code for a factorial:
 ```
-int factorial(int a) {
+int factorial(int a) { //couldn't think of anything creative here :(
     if (a==1) {
         return 1;
     }
@@ -32,7 +33,8 @@ To return a single value from the function:
 return (variable)
 ```
 However, if you want to return multiple value from a function, it may require something more complex, 
-especially when returning values of different variable types.
+especially when returning values of different variable types. 
+Here's three versions of a function that describes my differing levels of excitement around Alex versus with other people.
 
 
 Option 1: Pass-by-pointer

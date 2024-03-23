@@ -20,15 +20,15 @@ Switch Statements
 Switch statements compare one value to find things it might possibly be equal to.
 This works similarly to an if-else chain, but more condensed in a way that makes more sense.
 ```
-string gf = "Alex";
+int gf = 3;
 switch(gf) {
-    case "Stephanie":
+    case 1: //Stephanie
         cout << "once again i am not dating steph";
         break;
-    case "Kiersten":
+    case 2: //Kiersten
         cout << "not dating steph's partner, either";
         break;
-    case "Alex": //use of colon is odd
+    case 3: //Alex | Note:use of colon is odd
         cout << "I am dating Alex!"; //yes it does
         break; //break to stop checking of other cases
     case "Myself":

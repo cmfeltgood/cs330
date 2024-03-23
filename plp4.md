@@ -31,7 +31,7 @@ switch(gf) {
     case 3: //Alex | Note:use of colon is odd
         cout << "I am dating Alex!"; //yes it does
         break; //break to stop checking of other cases
-    case "Myself":
+    case 4: //Myself???
         cout << "this code won't even be reached";
 }
 ```
